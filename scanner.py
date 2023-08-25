@@ -1,59 +1,42 @@
 import nmap
-import json
 
-# A porta padrão da FIWARE é a 1026 e a do PhpMyAdmin é 3306
-ip = '108.158.137.101' 
-p_range = '21-100'
-scan_results = {}
 
-def scans(ip, p_range):
+# Função para realizar o scan de portas TCP e UDP
+def Port_Scan(target_ip, target_ports):
+    
+    # Cria uma instância do scanner de portas Nmap
     nm = nmap.PortScanner()
 
-    # Executando scan TCP
-    custom_args_tcp = f"-p {p_range} -T4 -A -sS"
-    nm.scan(hosts=ip, arguments=custom_args_tcp)
+    # Realiza o scan de portas TCP e UDP no IP e portas especificados
+    scan_results = nm.scan(target_ip, target_ports, arguments="-sS -sU")
 
-    # Executando scan UDP
-    custom_args_udp = f"-p U:{p_range} -T4"
-    nm_udp = nmap.PortScanner()
-    nm_udp.scan(hosts=ip, arguments=custom_args_udp)
+    # Lista com os resultados formatados para serem adicionados ao banco
+    formatted_results = {}
 
-    # Transformando a saída em JSON
+    # Para cada alvo no resultado do scan TCP
+    for target in scan_results["scan"][target_ip]["tcp"]:
+        
+        # Converte a porta de string para inteiro
+        port = int(target)
 
-    # Criando um dicionário para os resultados do scan TCP e fazendo um for para que neste dicionário seja guardado, por host, somente as portas abertas
-    tcp_results = {}
-    for host in nm.all_hosts():
-        open_ports = {port: "open" for port, info in nm[host]['tcp'].items() if info['state'] == 'open'}
-        tcp_results[host] = open_ports
+        # Obtém o nome do serviço associado à porta
+        service = scan_results["scan"][target_ip]["tcp"][target]["name"]
 
-    # Criando um dicionário para os resultados do scan em UDP e fazendo o mesmo
-    udp_results = {}
-    for host in nm_udp.all_hosts():
-        if 'udp' in nm_udp[host] and 'udp' in nm_udp[host]['udp']: # Esse if checa se há UDP no resultado do NMAP, sem isso o programa dá erro
-            open_ports = {port: "open" for port in nm_udp[host]['udp'] if nm_udp[host]['udp'][port]['state'] == 'open'}
-            udp_results[host] = open_ports
+        # Armazena o nome do serviço e o protocolo TCP no dicionário de resultados formatados
+        formatted_results[str(port)] = {"service": service, "protocol": "TCP"}
 
-    # Adicionando no dicionário final os resultados
-    scan_results["TCP Scan:"] = tcp_results
-    scan_results["UDP Scan:"] = udp_results
+    # Para cada alvo no resultado do scan UDP
+    for target in scan_results["scan"][target_ip]["udp"]:
+        
+        # Converte a porta de string para inteiro
+        port = int(target)
 
-# Criando a função principal do programa que irá executar o scan e imprimir na tela para o usuário
+        # Obtém o nome do serviço associado à porta
+        service = scan_results["scan"][target_ip]["udp"][target]["name"]
 
-def main():
+        # Armazena o nome do serviço e o protocolo UDP no dicionário de resultados formatados
+        formatted_results[str(port)] = {"service": service, "protocol": "UDP"}
 
-    #ip = input(str('[?] Insira o IP do alvo desejado: '))
-    #p_range = input(str('[?] Insira o range de portas, separados por um hífen, ou vírgula caso seja duas ou mais portas específicas (ex: 21-443): '))
-    ports_opened = []
-    scans(ip, p_range)
-    for port in p_range:
-        if port in scan_results:
-            print(f'[!] Porta {port} aberta')
-            ports_opened.append(port)
-
-        else:
-            print(f'[!] A porta {port} está fechada')
-
-    print(f'[+] O host {ip} possuí as portas {ports_opened} abertas')
-
-main()
+    # Retorna os resultados formatados
+    return formatted_results
 
