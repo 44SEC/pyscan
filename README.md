@@ -15,13 +15,13 @@
 * [Descrição do Projeto](#descrição-do-projeto)
 * [Status do Projeto](#status-do-projeto)
 * [Port Scanner](#port-scanner)
-* [Forma de contagem](#forma-de-contagem)
+* [Topologia](#topologia)
 * [Funcionalidades e Demonstração da Aplicação](#funcionalidades-e-demonstração-da-aplicação)
 * [Tecnologias utilizadas](#tecnologias-utilizadas)
 * [Link de vídeo explicativo](https://)
 * [Pessoas Desenvolvedoras do Projeto](#pessoas-desenvolvedoras-do-projeto)
 * [Licença](#licença)
-* [Conclusão](#conclusão)
+
 
 # Descrição do Projeto
 
@@ -37,6 +37,10 @@ O projeto foi desenvolvido diante da proposta de trabalho do professor Fábio Ca
 Um Port Scanner é uma ferramenta ou software projetado para identificar quais portas de comunicação estão abertas em um sistema de computador ou em uma rede. Portas são pontos de extremidade numéricos usados ​​para distinguir diferentes serviços e processos em uma rede.
 
 O objetivo principal de um Port Scanner é mapear as portas abertas em um ou mais alvos, permitindo a análise das configurações de segurança e da disponibilidade dos serviços. 
+
+# Topologia
+
+![diagrama drawio](https://github.com/44SEC/pyscan/assets/129625591/3e331648-28ac-4b35-b186-413f51347dd5)
 
 # Funcionalidades e Demonstração da Aplicação
 
@@ -74,4 +78,8 @@ Suellen Guedes Rufino
 # Licença
 
 GNU LICENSE
+
+
+
+
 
