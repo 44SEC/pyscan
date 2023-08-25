@@ -27,5 +27,3 @@ def Insert_MongoDB(data):
         print("\n[-] Certifique-se de que você possui o MongoDB instalado e em execução.\n")
 
 
-# Função que pega os dados do MongoDB
-# def Get_
