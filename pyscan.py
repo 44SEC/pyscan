@@ -61,7 +61,6 @@ def PyScan():
 
     # Insere os resultados formatados no MongoDB
     Insert_MongoDB(combined_results)
-    print("\n[+] Resultados do scan inseridos no MongoDB com sucesso!\n")
 
 
 # Rodando a função PyScan
