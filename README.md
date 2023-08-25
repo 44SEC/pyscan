@@ -43,7 +43,7 @@ O objetivo principal de um Port Scanner é mapear as portas abertas em um alvo, 
 
 # Funcionalidades e Demonstração da Aplicação
 
-* [Explicando e demonstrando "pyscan.py"](https:)
+* [Explicando e demonstrando "pyscan.py"](https://youtu.be/SfpW_mEFfuE)
 
 Para executar o programa, inicie primeiro o interpretador com o comando py ou python3, no sistema operacional Linux baseado em Debian.
 
