@@ -73,7 +73,7 @@ Suellen Guedes Rufino
 
 # Licença
 
-Todos os direitos reservados - GNU LICENSE
+GNU LICENSE
 
 # Conclusão
 
