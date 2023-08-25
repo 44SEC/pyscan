@@ -73,7 +73,7 @@ Suellen Guedes Rufino
 
 # Licença
 
-Todos os direitos reservados 44SEC - Fortification for Security
+Todos os direitos reservados - GNU LICENSE
 
 # Conclusão
 
