@@ -79,6 +79,12 @@ $ pip3 install -r requirements.txt
 $ sudo python3 pyscan.py -t <target-ip> -p <range-ports>
 ```
 
+# Demonstração de execução
+![terminal-pyscan](https://github.com/44SEC/pyscan/assets/78339857/9f2f46f3-b400-474f-93e5-4564a15a9d23)
+
+# Demonstração MongoDB
+![mongodb-pyscan](https://github.com/44SEC/pyscan/assets/78339857/0338c916-493a-4fde-8a76-46e87d421d60)
+
 # Tecnologias utilizadas
 
 Para realizar o projeto, o grupo 44SEC optou por utilizar a liguagem Python, MongoDB, Nmap em um ambiente Linux
