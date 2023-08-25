@@ -24,7 +24,7 @@
 
 # Descrição do Projeto
 
-O seguinte projeto tem como objetivo realizar uma ferramenta usada para verificar quais portas estão abertas em um sistema remoto, seja em uma máquina ou em um servidor. 
+O seguinte projeto tem como objetivo realizar uma ferramenta usada para verificar quais portas estão abertas em um sistema, seja em uma máquina ou em um servidor. 
 
 # Status do Projeto
 
@@ -35,7 +35,7 @@ O projeto foi desenvolvido diante da proposta de trabalho do professor Fábio Ca
 
 Um Port Scanner é uma ferramenta ou software projetado para identificar quais portas de comunicação estão abertas em um sistema de computador ou em uma rede. Portas são pontos de extremidade numéricos usados ​​para distinguir diferentes serviços e processos em uma rede.
 
-O objetivo principal de um Port Scanner é mapear as portas abertas em um ou mais alvos, permitindo a análise das configurações de segurança e da disponibilidade dos serviços. 
+O objetivo principal de um Port Scanner é mapear as portas abertas em um alvo, permitindo a análise das configurações de segurança e da disponibilidade dos serviços. 
 
 # Topologia
 
@@ -43,25 +43,26 @@ O objetivo principal de um Port Scanner é mapear as portas abertas em um ou mai
 
 # Funcionalidades e Demonstração da Aplicação
 
-* [Explicando e demonstrando "scanner.py"](https:)
+* [Explicando e demonstrando "pyscan.py"](https:)
 
-Para executar o programa, inicie primeiro o interpretador com o comando py ou python3, no windows powershell ou no terminal do seu sistema operacional.
+Para executar o programa, inicie primeiro o interpretador com o comando py ou python3, no sistema operacional Linux baseado em Debian.
 
 * Clone o repositório no diretório desejado
 
 ```
-$ git clone https://github.com/44SEC/pyscan
+$ git clone https://github.com/44SEC/pyscan.git
 ```
 
 * Execute o script com o seguinte comando
 
 ```
-$ python3 pyscan.py
+$ sudo python3 pyscan.py -t <target-ip> -p <range-ports>
 ```
 
 # Tecnologias utilizadas
 
-Para realizar o projeto, o grupo 44SEC optou por utilizar a liguagem Python, Mongo DB e Linux
+Para realizar o projeto, o grupo 44SEC optou por utilizar a liguagem Python, MongoDB, Nmap e Linux
+
 # Pessoas Desenvolvedoras do Projeto
 
 Felipe de Resende Madeira 
