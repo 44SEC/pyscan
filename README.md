@@ -75,5 +75,3 @@ Suellen Guedes Rufino
 
 GNU LICENSE
 
-# Conclusão
-
