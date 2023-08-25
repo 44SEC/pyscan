@@ -4,8 +4,7 @@
 ![Scanner](https://github.com/44SEC/pyscan/assets/129625591/46ea0ea6-a17e-4c9d-9bf7-d42d2bcd5cfe.png)
 
 # Badges
-![badge1](https://img.shields.io/badge/python-3.11-blue) ![badge2](https://img.shields.io/badge/status-aguardando%20revis%C3%A3o-yellow) ![badge3](https://img.shields.io/badge/gitstars-4-blue) ![badge4](https://img.shields.io/badge/testado%20por-44Sec-green)
-
+![badge1](https://img.shields.io/badge/python-3.11-blue) ![badge2](https://img.shields.io/badge/status-aguardando%20revis%C3%A3o-yellow) ![badge3](https://img.shields.io/badge/gitstars-4-blue) ![badge4](https://img.shields.io/badge/testado%20por-44Sec-green) ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 # Índice 
 
@@ -62,7 +61,7 @@ $ python3 pyscan.py
 
 # Tecnologias utilizadas
 
-Para realizar o projeto, o grupo 44SEC optou por utilizar a liguagem Python e o banco de dados Mongo DB.
+Para realizar o projeto, o grupo 44SEC optou por utilizar a liguagem Python, Mongo DB e Linux
 # Pessoas Desenvolvedoras do Projeto
 
 Felipe de Resende Madeira 
